@@ -1,0 +1,33 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package cat.proven.ws;
+
+import javax.jws.WebService;
+import javax.jws.WebMethod;
+import javax.jws.WebParam;
+
+/**
+ *
+ * @author Alumne
+ */
+@WebService(serviceName = "NewWebService")
+public class NewWebService {
+
+    /**
+     * This is a sample web service operation
+     */
+    @WebMethod(operationName = "hello")
+    public String hello(@WebParam(name = "name") String txt) {
+        return "Hello " + txt + " !";
+    }
+        /**
+     * This is a sample web service operation
+     */
+    @WebMethod(operationName = "adios")
+    public String adios(@WebParam(name = "name") String txt, @WebParam(name = "apellido") String txt2) {
+        return "Hello " + txt + " " + txt2 + " !";
+    }
+}
